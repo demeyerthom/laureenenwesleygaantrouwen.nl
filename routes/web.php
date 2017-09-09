@@ -12,5 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+})->name('home');
+Route::get('/cadeau', function () {
+    return view('cadeau');
+})->name('cadeau');
+Route::get('/rsvp', function () {
+    return view('rsvp');
+})->name('rsvp');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });
