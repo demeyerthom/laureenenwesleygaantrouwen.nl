@@ -6,3 +6,4 @@
 /.vagrant
 Homestead.yaml
 .env
+/npm-debug.log

@@ -43,5 +43,5 @@
 @endsection
 
 @section('scripts')
-    <script>initClock("js-countdown", new Date("January 1, 2018"));</script>
+    <script>initClock("js-countdown", new Date("{{setting('home.datum')}}"));</script>
 @endsection
