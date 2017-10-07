@@ -36,12 +36,12 @@
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item px-lg-4">
+            <!--<li class="nav-item px-lg-4">
                 <a class="nav-link text-uppercase text-expanded" href="{{route('cadeau')}}">Cadeau</a>
             </li>
             <li class="nav-item px-lg-4">
                 <a class="nav-link text-uppercase text-expanded" href="{{route('rsvp')}}">RSVP</a>
-            </li>
+            </li>-->
         </ul>
     </div>
 </nav>
@@ -50,12 +50,14 @@
     @yield('content')
 </div>
 
-<footer class="bg-faded text-center py-4">
+<footer class="bg-faded text-center py-4 fixed-bottom">
     <div class="container">
         <p class="m-0">Copyright &copy; Thomas De Meyer 2017</p>
     </div>
 </footer>
 <script src="{{asset('js/app.js')}}"></script>
+<script>stickyNavbar('.navbar');</script>
+@yield('scripts')
 </body>
 
 </html>

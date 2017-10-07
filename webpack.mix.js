@@ -25,5 +25,5 @@ mix.scripts([
     'resources/assets/js/popper.js',
     'node_modules/tether/dist/js/tether.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
-    'resources/assets/js/app.js',
+    'resources/assets/js/*.js',
 ], 'public/js/app.js');
