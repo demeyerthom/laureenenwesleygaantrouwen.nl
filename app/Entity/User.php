@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Entity;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use TCG\Voyager\Models\User as VoyagerUser;
 
-class User extends \TCG\Voyager\Models\User
+class User extends VoyagerUser
 {
     use Notifiable;
 

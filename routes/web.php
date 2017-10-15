@@ -11,15 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-Route::get('/cadeau', function () {
-    return view('cadeau');
-})->name('cadeau');
-Route::get('/rsvp', function () {
-    return view('rsvp');
-})->name('rsvp');
+Route::get('/', 'HomeController@get')->name('home');
+Route::get('/rsvp', 'Rsvp\InviteeController@get')->name('rsvp');
+Route::get('/photobook', 'PhotobookController@get')->name('photobook');
 
 
 Route::group(['prefix' => 'admin'], function () {

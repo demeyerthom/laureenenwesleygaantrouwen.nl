@@ -13,7 +13,7 @@ return [
     'user' => [
         'add_default_role_on_register' => true,
         'default_role'                 => 'user',
-        'namespace'                    => App\User::class,
+        'namespace'                    => \App\Entity\User::class,
         'default_avatar'               => 'users/default.png',
     ],
 
@@ -42,7 +42,7 @@ return [
     */
 
     'models' => [
-        //'namespace' => 'App\\',
+        'namespace' => 'App\\Entity\\',
     ],
 
     /*
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'hidden_files' => false,
+    'hidden_files' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -121,19 +121,19 @@ return [
         /*
          * Set whether or not the multilingual is supported by the BREAD input.
          */
-        'enabled' => false,
+        'enabled' => true,
 
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'nl',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
             'en',
-            //'pt',
+            'nl'
         ],
     ],
 
@@ -228,9 +228,8 @@ return [
 
     'primary_color' => '#22A7F0',
 
-    'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
+    'show_dev_tips' => false,
 
-    // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
         //'css/custom.css',
     ],
