@@ -16,6 +16,7 @@ mix.styles(
         'node_modules/bootstrap/dist/css/bootstrap.css',
         'node_modules/tether/dist/css/tether.css',
         'node_modules/tether/dist/css/tether-theme-basic.css',
+        'node_modules/ekko-lightbox/dist/ekko-lightbox.css',
         'resources/assets/css/app.css',
     ], 'public/css/app.css'
 );
@@ -25,5 +26,7 @@ mix.scripts([
     'resources/assets/js/popper.js',
     'node_modules/tether/dist/js/tether.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
+    'node_modules/ekko-lightbox/dist/ekko-lightbox.js',
+    'node_modules/masonry-layout/dist/masonry.pkgd.js',
     'resources/assets/js/*.js',
 ], 'public/js/app.js');
