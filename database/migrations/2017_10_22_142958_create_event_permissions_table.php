@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInviteeGroupsTable extends Migration
+class CreateEventPermissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateInviteeGroupsTable extends Migration
      */
     public function up()
     {
-        Schema::create('invitee_groups', function (Blueprint $table) {
+        Schema::create('event_permissions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('hash');
-            $table->string('name');
+            $table->boolean('reception');
+            $table->boolean('diner');
+            $table->boolean('party');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateInviteeGroupsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('invitee_groups');
+        Schema::dropIfExists('event_permissions');
     }
 }

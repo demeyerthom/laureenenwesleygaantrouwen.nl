@@ -37,15 +37,18 @@
             <li class="nav-item px-lg-4">
                 <a class="nav-link text-uppercase" href="{{route('photobook')}}">Foto album</a>
             </li>
+            <li class="nav-item px-lg-4">
+                <a class="nav-link text-uppercase" href="{{route('rsvp-form')}}">RSVP</a>
+            </li>
         </ul>
     </div>
 </nav>
 
-<div class="container">
+<div class="container-fluid content">
     @yield('content')
 </div>
 
-<footer class="bg-faded text-center py-4 fixed-bottom">
+<footer class="bg-faded text-center py-4">
     <div class="container">
         <p class="m-0">Copyright &copy; Thomas De Meyer 2017</p>
     </div>

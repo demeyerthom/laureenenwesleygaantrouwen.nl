@@ -8223,140 +8223,146 @@ a.text-dark:focus, a.text-dark:hover {
  */
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  background: url('/storage/images/bg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    background: url('/storage/images/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6, .text-heading {
-  font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
-  font-size: 4rem;
+    font-size: 4rem;
+}
+
+.content {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .tagline-upper {
-  font-size: 5rem;
-  font-weight: 700;
-  line-height: 2;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 2;
 }
 
 .tagline-lower {
-  font-size: 1.2rem;
-  line-height: 1;
+    font-size: 1.2rem;
+    line-height: 1;
 }
 
 .text-expanded {
-  letter-spacing: 2px;
+    letter-spacing: 2px;
 }
 
 .text-shadow {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .text-lg {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 .bg-faded {
-  background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .bg-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 hr.divider {
-  border-color: #292b2c;
-  max-width: 250px;
+    border-color: #292b2c;
+    max-width: 250px;
 }
 
 .map-container iframe {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .map-container iframe.clicked {
-  pointer-events: auto;
+    pointer-events: auto;
 }
 
 .navbar-nav {
-  float:none;
-  margin:0 auto;
-  display: block;
-  text-align: center;
+    float: none;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
 }
 
 .navbar-nav > li {
-  display: inline-block;
-  float:none;
+    display: inline-block;
+    float: none;
 }
 
 .sticky {
-  position:fixed;
-  top:0;
+    position: fixed;
+    top: 0;
 }
 
 .menu-padding {
-  padding-top:40px;
+    padding-top: 40px;
 }
 
 .countdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .countdown-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  min-width: 31%;
-  margin-bottom: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    min-width: 31%;
+    margin-bottom: 1rem;
 }
 
 .countdown-item-large {
-  -webkit-box-flex: 1;
-  -ms-flex: auto;
-  flex: auto;
-  width: 100%;
-  font-size: 2.75em;
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    width: 100%;
+    font-size: 2.75em;
 }
 
 .countdown-timer {
-  padding: .25em;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 3px;
-  font-weight: bold;
-  font-size: 2em;
+    padding: .25em;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 2em;
 }
 
 .countdown-label {
-  font-size: 1em;
-  padding-top: .40em;
+    font-size: 1em;
+    padding-top: .40em;
 }
+
 .countdown-item-large .countdown-label:before, .countdown-item-large .countdown-label:after {
-  content: '';
-  display: block;
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.4), transparent);
-  background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.4), transparent);
+    content: '';
+    display: block;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.4), transparent);
+    background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.4), transparent);
 }

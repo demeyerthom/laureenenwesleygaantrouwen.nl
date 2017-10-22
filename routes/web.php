@@ -12,7 +12,11 @@
 */
 
 Route::get('/', 'HomeController@get')->name('home');
-Route::get('/rsvp', 'Rsvp\InviteeController@get')->name('rsvp');
+Route::prefix('rsvp')->group(function () {
+    Route::get('/formulier/{type?}', 'RSVP\FormController@get')->name('rsvp-form');
+    Route::post('/formulier', 'RSVP\FormController@post');
+    Route::get('/bedankt', 'RSVP\ThanksController@get')->name('rsvp-thanks');
+});
 Route::get('/photobook', 'PhotobookController@get')->name('photobook');
 
 
