@@ -15,8 +15,9 @@ class CreateEventPermissionsTable extends Migration
     {
         Schema::create('event_permissions', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('token');
             $table->boolean('reception');
-            $table->boolean('diner');
+            $table->boolean('dinner');
             $table->boolean('party');
             $table->timestamps();
         });

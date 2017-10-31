@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@get')->name('home');
 Route::prefix('rsvp')->group(function () {
-    Route::get('/formulier/{type?}', 'RSVP\FormController@get')->name('rsvp-form');
+    Route::get('/formulier', 'RSVP\FormController@get')->name('rsvp-form');
     Route::post('/formulier', 'RSVP\FormController@post');
     Route::get('/bedankt', 'RSVP\ThanksController@get')->name('rsvp-thanks');
 });
