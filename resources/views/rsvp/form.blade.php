@@ -6,8 +6,36 @@
             <hr class="divider">
             <h2 class="text-center text-lg text-uppercase my-0">RSVP</h2>
             <hr class="divider">
-            <p>Het lijkt erop dat je niet met een goede url op deze pagina terecht bent gekomen. Neem contact op met
-                iemand!</p>
+
+            <div class="col-sm-12">
+                <p>
+                    Het lijkt erop dat je niet met een goede url op deze pagina terecht bent gekomen. Voer hieronder de
+                    code
+                    die je mee gekregen hebt, of neem contact op met
+                    <a href="mailto:tech@laureenenwesleygaantrouwen.nl">tech</a> om een nieuwe code te krijgen!</p>
+            </div>
+            <div class="col-sm-12">
+                <form id="insertTokenForm">
+                    @if($hasToken)
+                        <div id="first-name-error" class="alert alert-danger col-12" role="alert">
+                            Deze token bestaat niet, of is incorrect. Probeer het nog een keer, of neem contact op
+                            met
+                            <a href="mailto:tech@laureenenwesleygaantrouwen.nl">tech</a>!
+                        </div>
+                    @endif
+                    <div class="form-group row">
+                        <div class="col-9">
+                            <input type="text" class="form-control form-control-lg" id="token" placeholder="Token"
+                                   name="token">
+                        </div>
+                        <div class="col-3">
+                            <button type="submit" id="submit-token" class="btn btn-lg btn-primary">
+                                Ga naar het formulier!
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     @else
         <div class="bg-faded p-4 my-4">
@@ -216,6 +244,12 @@
         $("#add-invitee").on("click", function (event) {
             event.preventDefault();
             addInvitee();
+        });
+
+        $("#submit-token").on("click", function (event) {
+            event.preventDefault();
+            let data = $("#insertTokenForm").serializeArray();
+            window.location = '?token=' + data[0].value;
         });
 
         $("#save-invitees").on("click", function (event) {

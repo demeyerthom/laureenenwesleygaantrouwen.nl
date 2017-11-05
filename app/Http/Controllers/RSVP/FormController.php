@@ -24,7 +24,7 @@ class FormController extends Controller
         /** @var EventPermission $eventPermission */
         $eventPermission = EventPermission::where('token', $request->get('token'))->first();
 
-        return view('rsvp.form', ['permissions' => $eventPermission]);
+        return view('rsvp.form', ['hasToken' => $request->has('token'), 'permissions' => $eventPermission]);
     }
 
     /**
@@ -53,10 +53,10 @@ class FormController extends Controller
             $invitee->first_name = $row['first-name'];
             $invitee->last_name = $row['last-name'];
             $invitee->email = $row['email'];
-            $invitee->at_reception = isset($row['reception']) ? (boolean) $row['reception'] : false;
-            $invitee->at_dinner = isset($row['dinner']) ? (boolean) $row['dinner'] : false;
+            $invitee->at_reception = isset($row['reception']) ? (boolean)$row['reception'] : false;
+            $invitee->at_dinner = isset($row['dinner']) ? (boolean)$row['dinner'] : false;
             $invitee->dinner_type = isset($row['dinner']) ? $row['dinner'] : null;
-            $invitee->at_party = isset($row['party']) ? (boolean) $row['party'] : false;
+            $invitee->at_party = isset($row['party']) ? (boolean)$row['party'] : false;
             $invitee->save();
         }
 
