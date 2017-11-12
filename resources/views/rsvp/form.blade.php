@@ -4,28 +4,26 @@
     @if($permissions === null)
         <div class="bg-faded p-4 my-4">
             <hr class="divider">
-            <h2 class="text-center text-lg text-uppercase my-0">RSVP</h2>
+            <h2 class="text-center text-lg text-uppercase my-0">Aanwezigheid gasten</h2>
             <hr class="divider">
 
             <div class="col-sm-12">
                 <p>
-                    Het lijkt erop dat je niet met een goede url op deze pagina terecht bent gekomen. Voer hieronder de
-                    code
-                    die je mee gekregen hebt, of neem contact op met
-                    <a href="mailto:tech@laureenenwesleygaantrouwen.nl">tech</a> om een nieuwe code te krijgen!</p>
+                    Voer hieronder de code die je mee gekregen hebt, of neem contact op met
+                    <a href="mailto:tech@laureenenwesleygaantrouwen.nl">tech</a> om een nieuwe code te krijgen!
+                </p>
             </div>
             <div class="col-sm-12">
                 <form id="insertTokenForm">
                     @if($hasToken)
                         <div id="first-name-error" class="alert alert-danger col-12" role="alert">
                             Deze token bestaat niet, of is incorrect. Probeer het nog een keer, of neem contact op
-                            met
-                            <a href="mailto:tech@laureenenwesleygaantrouwen.nl">tech</a>!
+                            met <a href="mailto:tech@laureenenwesleygaantrouwen.nl">tech</a>!
                         </div>
                     @endif
                     <div class="form-group row">
                         <div class="col-9">
-                            <input type="text" class="form-control form-control-lg" id="token" placeholder="Token"
+                            <input type="text" class="form-control form-control-lg" id="token" placeholder="Code"
                                    name="token">
                         </div>
                         <div class="col-3">
