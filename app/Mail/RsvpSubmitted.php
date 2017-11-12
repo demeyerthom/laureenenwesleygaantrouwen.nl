@@ -4,12 +4,9 @@ namespace App\Mail;
 
 use App\Entity\Invitee;
 use Illuminate\Mail\Mailable;
-use Illuminate\Queue\SerializesModels;
 
 class RsvpSubmitted extends Mailable
 {
-    use SerializesModels;
-
     /**
      * @var Invitee[]
      */
@@ -32,6 +29,7 @@ class RsvpSubmitted extends Mailable
      */
     public function build()
     {
-        return $this->to(setting('rsvp.email'))->markdown('emails.rsvp.submitted', ['invitees' => $this->invitees]);
+        return $this->to(setting('home.rsvp.email'))
+            ->markdown('emails.rsvp.submitted', ['invitees' => $this->invitees]);
     }
 }
