@@ -5,8 +5,10 @@ namespace App\Http\Controllers\RSVP;
 use App\Entity\EventPermission;
 use App\Entity\Invitee;
 use App\Http\Controllers\Controller;
+use App\Mail\RsvpSubmitted;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Mailer;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -14,6 +16,21 @@ use Illuminate\Support\Facades\Validator;
  */
 class FormController extends Controller
 {
+    /**
+     * @var Mailer
+     */
+    protected $mailer;
+
+    /**
+     * FormController constructor.
+     *
+     * @param Mailer $mailer
+     */
+    public function __construct(Mailer $mailer)
+    {
+        $this->mailer = $mailer;
+    }
+
     /**
      * @param Request $request
      *
@@ -48,6 +65,8 @@ class FormController extends Controller
             ]
         );
 
+        $invitees = [];
+
         foreach ($rows['invitee'] as $row) {
             $invitee = new Invitee();
             $invitee->first_name = $row['first-name'];
@@ -58,7 +77,11 @@ class FormController extends Controller
             $invitee->dinner_type = isset($row['dinner']) ? $row['dinner'] : null;
             $invitee->at_party = isset($row['party']) ? (boolean)$row['party'] : false;
             $invitee->save();
+            $invitees[] = $invitee;
         }
+
+        // Send a notification email
+        $this->mailer->send(new RsvpSubmitted($invitees));
 
         return \response(route('rsvp-thanks'), 201);
     }

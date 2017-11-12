@@ -38,9 +38,9 @@ class EventPermissionsTableSeeder extends Seeder
         ]);
         DB::table('event_permissions')->insert([
             'token' => substr(str_shuffle("abcdefghijklmnopqrstuvwxyz"), 0, 6),
-            'reception' => true,
+            'reception' => false,
             'dinner' => true,
-            'party' => false,
+            'party' => true,
             'created_at' => new \DateTime(),
             'updated_at' => new \DateTime()
         ]);
