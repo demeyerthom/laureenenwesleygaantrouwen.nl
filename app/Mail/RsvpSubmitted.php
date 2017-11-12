@@ -33,6 +33,6 @@ class RsvpSubmitted extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->markdown('emails.rsvp.submitted', ['invitees' => $this->invitees]);
+        return $this->to(setting('rsvp.email'))->markdown('emails.rsvp.submitted', ['invitees' => $this->invitees]);
     }
 }
