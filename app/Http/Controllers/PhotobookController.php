@@ -29,12 +29,13 @@ class PhotobookController extends Controller
      */
     public function get(): View
     {
-        $images = $this->filesystem->allFiles(storage_path('app/public/carousel'));
+        $images = $this->filesystem->allFiles(storage_path('app/public/photobook'));
+        $directories = $this->filesystem->directories(storage_path('app/public/photobook'));
 
         $imageUrls = array_map(function (SplFileInfo $image) {
             return str_replace(storage_path('app/public'), 'storage/', $image->getPath() . '/' . $image->getFilename());
         }, $images);
 
-        return view('photobook', ['images' => $imageUrls]);
+        return view('photobook', ['images' => $imageUrls, 'directories' => $directories]);
     }
 }
