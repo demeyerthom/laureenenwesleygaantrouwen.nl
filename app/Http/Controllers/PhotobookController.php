@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 use Symfony\Component\Finder\SplFileInfo;
 
 class PhotobookController extends Controller
@@ -25,12 +25,20 @@ class PhotobookController extends Controller
     }
 
     /**
+     * @param Request $request
+     *
      * @return View
      */
-    public function get(): View
+    public function get(Request $request): View
     {
-        $images = $this->filesystem->allFiles(storage_path('app/public/photobook'));
-        $directories = $this->filesystem->directories(storage_path('app/public/photobook'));
+        $isRoot = $request->has('directory');
+
+        $directory = $isRoot ? $request->get('directory') : config('site.photobook.storage_dir');
+
+        $directories = $this->filesystem->directories($directory);
+
+        $images = $this->filesystem->files($directory);
+        shuffle($images);
 
         $imageUrls = array_map(function (SplFileInfo $image) {
             return str_replace(storage_path('app/public'), 'storage/', $image->getPath() . '/' . $image->getFilename());

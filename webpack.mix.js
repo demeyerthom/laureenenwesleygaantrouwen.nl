@@ -14,6 +14,7 @@ let mix = require('laravel-mix');
 mix.styles(
     [
         'node_modules/bootstrap/dist/css/bootstrap.css',
+        'node_modules/font-awesome/css/font-awesome.css',
         'node_modules/tether/dist/css/tether.css',
         'node_modules/tether/dist/css/tether-theme-basic.css',
         'node_modules/ekko-lightbox/dist/ekko-lightbox.css',
@@ -30,3 +31,5 @@ mix.scripts([
     'node_modules/masonry-layout/dist/masonry.pkgd.js',
     'resources/assets/js/*.js',
 ], 'public/js/app.js');
+
+mix.copyDirectory('node_modules/font-awesome/fonts', 'public/fonts');
