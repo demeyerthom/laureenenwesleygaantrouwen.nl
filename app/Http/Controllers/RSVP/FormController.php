@@ -74,7 +74,7 @@ class FormController extends Controller
             $invitee->email = $row['email'];
             $invitee->at_reception = isset($row['reception']) ? (boolean)$row['reception'] : false;
             $invitee->at_dinner = isset($row['dinner']) ? (boolean)$row['dinner'] : false;
-            $invitee->dinner_type = isset($row['dinner']) ? $row['dinner'] : null;
+            $invitee->dinner_type = isset($row['dinner']) ? $row['dinner'] : '';
             $invitee->at_party = isset($row['party']) ? (boolean)$row['party'] : false;
             $invitee->save();
             $invitees[] = $invitee;

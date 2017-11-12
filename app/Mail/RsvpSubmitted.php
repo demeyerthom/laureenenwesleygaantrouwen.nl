@@ -29,7 +29,7 @@ class RsvpSubmitted extends Mailable
      */
     public function build()
     {
-        return $this->to(setting('home.rsvp.email'))
+        return $this->to(setting('site.rsvp'))
             ->markdown('emails.rsvp.submitted', ['invitees' => $this->invitees]);
     }
 }
