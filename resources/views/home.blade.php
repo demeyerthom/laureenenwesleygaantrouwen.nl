@@ -29,5 +29,5 @@
 @endsection
 
 @section('scripts')
-    <script>initClock("js-countdown", new Date("{{setting('home.datum')}}"));</script>
+    <script>initClock("js-countdown", new Date("{{setting('site.datum')}}"));</script>
 @endsection
