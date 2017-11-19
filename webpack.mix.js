@@ -18,7 +18,7 @@ mix.styles(
         'node_modules/tether/dist/css/tether.css',
         'node_modules/tether/dist/css/tether-theme-basic.css',
         'node_modules/ekko-lightbox/dist/ekko-lightbox.css',
-        'resources/assets/css/app.css',
+        'resources/assets/css/*.css',
     ], 'public/css/app.css'
 );
 
@@ -30,6 +30,7 @@ mix.scripts([
     'node_modules/ekko-lightbox/dist/ekko-lightbox.js',
     'node_modules/masonry-layout/dist/masonry.pkgd.js',
     'resources/assets/js/*.js',
+    'resources/assets/js/components/*.js',
 ], 'public/js/app.js');
 
 mix.copyDirectory('node_modules/font-awesome/fonts', 'public/fonts');

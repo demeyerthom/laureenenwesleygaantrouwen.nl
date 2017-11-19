@@ -63,7 +63,11 @@
     </div>
 </footer>
 <script src="{{asset('js/app.js')}}"></script>
-<script>stickyNavbar('.navbar');</script>
+<script>
+    $(document).ready(function () {
+        stickyNavbar('.navbar');
+    });
+</script>
 @yield('scripts')
 </body>
 
