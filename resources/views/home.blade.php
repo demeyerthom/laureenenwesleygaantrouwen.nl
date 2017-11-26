@@ -4,37 +4,38 @@
     <div class="bg-faded p-4 my-4">
         <div>
             <hr>
-            <div class="countdown text-center col-md-12" id="js-countdown">
-                <div class="countdown-item col-md-3">
+            <div class="countdown text-center col-md-6" id="js-countdown">
+                <div class="countdown-item col-md-6">
                     <div class="countdown-timer js-countdown-days" aria-labelledby="day-countdown"></div>
                     <div class="countdown-label" id="day-countdown">Dagen</div>
                 </div>
-                <div class="countdown-item col-md-3">
+                <div class="countdown-item col-md-6">
                     <div class="countdown-timer js-countdown-hours" aria-labelledby="hour-countdown"></div>
                     <div class="countdown-label" id="hour-countdown">Uren</div>
-                </div>
-                <div class="countdown-item col-md-3">
-                    <div class="countdown-timer js-countdown-minutes" aria-labelledby="minute-countdown"></div>
-                    <div class="countdown-label" id="minute-countdown">Minuten</div>
-                </div>
-
-                <div class="countdown-item col-md-3">
-                    <div class="countdown-timer js-countdown-seconds" aria-labelledby="second-countdown"></div>
-                    <div class="countdown-label" id="second-countdown">Seconden</div>
                 </div>
             </div>
             <hr>
 
             <div class="text-center col-md-12">
-                <p class="font-weight-bold text-uppercase">Zaterdag Negen September Tweeduizend en Achtien</p>
+                <p class="font-weight-bold text-uppercase">Zaterdag Negen Juni Tweeduizend en Achtien</p>
                 <p>
                     Geven om 15:00 Laureen en Wesley (met een beetje geluk) elkaar het ja-woord
                     <br>
-                    in Raadhuis de Paauw
+                    in
+                    <br>
+                    Raadhuis de Paauw
                     <br>
                     Raadhuislaan 22, 2242 CP Wassenaar
                 </p>
-                <p class="font-italic">Wij zouden het een eer vinden als jullie dit moment met ons willen delen!</p>
+                <p class="font-italic">Wij zouden het een eer vinden
+                    om dit moment met jullie te delen!
+                </p>
+            </div >
+            <hr class="divider">
+            <div class="text-center col-md-12">
+                <a type="submit" href="{{route('rsvp-form')}}" class="btn btn-lg btn-success">
+                    Geef je op!
+                </a>
             </div>
         </div>
     </div>
