@@ -91,20 +91,20 @@
 
                     @if($permissions->reception)
                         <div class="form-group">
-                            <h3>Receptie</h3>
+                            <h3>Ceremonie</h3>
                             <div id="reception-error" class="alert alert-danger" role="alert" hidden>
                                 Hoe bedoel je, je vult niets in ?!
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="radio" name="reception"
-                                           value="1">Ja, ik ben aanwezig bij de receptie.
+                                           value="1">Ja, ik ben aanwezig bij de ceremomie.
                                 </label>
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="radio" name="reception" value="0">Nee, ik ben
-                                    niet aanwezig bij de receptie
+                                    niet aanwezig bij de ceremomie
                                 </label>
                             </div>
                         </div>
@@ -124,50 +124,70 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <h4 class="card-title">Vlees</h4>
-                                                    <p class="card-text">Het precieze menu moet not bepaald worden</p>
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="dinner"
-                                                               value="meat">
-                                                        Ik neem vlees!
-                                                    </label>
+                                                    <p>
+                                                        <img src="/storage/images/vleesgerecht.jpg" alt="Moo!"
+                                                             class="img-thumbnail">
+                                                    </p>
+                                                    <p>
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="dinner"
+                                                                   value="meat">
+                                                            Ik neem vlees!
+                                                        </label>
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="card">
                                                 <div class="card-body">
                                                     <h4 class="card-title">Vis</h4>
-                                                    <p class="card-text">Het precieze menu moet not bepaald worden</p>
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="dinner"
-                                                               value="fish">
-                                                        Nee, liever vis!
-                                                    </label>
+                                                    <p>
+                                                        <img src="/storage/images/visgerecht.jpg" alt="blub blub"
+                                                             class="img-thumbnail">
+                                                    </p>
+                                                    <p>
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="dinner"
+                                                                   value="fish">
+                                                            Nee, liever vis!
+                                                        </label>
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="card">
                                                 <div class="card-body">
                                                     <h4 class="card-title">Vegetarisch</h4>
-                                                    <p class="card-text">Het precieze menu moet not bepaald worden</p>
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="dinner"
-                                                               value="vegetarian">
-                                                        Ik vind de natuur belangrijk en zo, liever vegetarisch!
-                                                    </label>
+                                                    <p>
+                                                        <img src="/storage/images/vegetarisch.jpg"
+                                                             alt="geen idee welk geluid tofu maakt"
+                                                             class="img-thumbnail">
+                                                    </p>
+                                                    <p>
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="dinner"
+                                                                   value="vegetarian">
+                                                            Ik vind de natuur belangrijk en zo, liever vegetarisch!
+                                                        </label>
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="card">
                                                 <div class="card-body">
                                                     <h4 class="card-title">Niet aanwezig bij het dinner</h4>
-                                                    <p class="card-text">Omdat ik belangrijkere dingen met mijn leven te
-                                                        doen heb kom ik niet...</p>
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="radio"
-                                                               name="dinner"
-                                                               value="0">
-                                                        Ik kom niet!
-                                                    </label>
+                                                    <p>
+                                                        <img src="/storage/images/pie-in-face.jpg"
+                                                             alt="ik houd niet van eten" class="img-thumbnail">
+                                                    </p>
+                                                    <p>
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="dinner"
+                                                                   value="0">
+                                                            Ik kom niet!
+                                                        </label>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>

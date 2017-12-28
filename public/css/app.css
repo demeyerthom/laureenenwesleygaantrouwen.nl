@@ -10749,8 +10749,13 @@ a.text-dark:focus, a.text-dark:hover {
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
  */
 
+@font-face {
+    font-family: 'Capitals Regular';
+    src: url('/fonts/capitals-regular.ttf'); /*URL to font*/
+}
+
 body {
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: "Capitals Regular", "Open Sans", Helvetica, Arial, sans-serif;
     background: url('/storage/images/bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

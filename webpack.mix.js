@@ -34,3 +34,4 @@ mix.scripts([
 ], 'public/js/app.js');
 
 mix.copyDirectory('node_modules/font-awesome/fonts', 'public/fonts');
+mix.copyDirectory('resources/assets/fonts', 'public/fonts');

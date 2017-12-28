@@ -17,9 +17,9 @@
             <hr>
 
             <div class="text-center col-md-12">
-                <p class="font-weight-bold text-uppercase">Zaterdag Negen Juni Tweeduizend en Achtien</p>
+                <p class="font-weight-bold text-uppercase">Zaterdag 9 Juni 2018</p>
                 <p>
-                    Geven om 15:00 Laureen en Wesley (met een beetje geluk) elkaar het ja-woord
+                    Geven om 15:00 Laureen en Wesley elkaar het ja-woord
                     <br>
                     in
                     <br>
@@ -30,7 +30,7 @@
                 <p class="font-italic">Wij zouden het een eer vinden
                     om dit moment met jullie te delen!
                 </p>
-            </div >
+            </div>
             <hr class="divider">
             <div class="text-center col-md-12">
                 <a type="submit" href="{{route('rsvp-form')}}" class="btn btn-lg btn-success">
@@ -52,12 +52,15 @@
                         </a>
                     </div>
                     <div class="bg-faded p-4 my-4 timeline-panel">
+                        <div class="timeline-title">
+                            Die met elkaar trouwden
+                        </div>
                         <div class="timeline-body row">
                             <div class="col-md-6">
                                 <img class="img-fluid" src="/storage/timeline/trouw_knoppert.jpg"/>
                             </div>
                             <div class="col-md-6">
-                                <p>Marion Bakker & Herman Knoppert</p>
+                                <img class="img-fluid" src="/storage/timeline/trouw_demeyer.jpg"/>
                             </div>
 
                         </div>
@@ -70,44 +73,14 @@
                         </a>
                     </div>
                     <div class="bg-faded p-4 my-4 timeline-panel">
-                        <div class="timeline-body row">
-                            <div class="col-md-6">
-                                <p>Nathalie De Moyer & Thierry De Meyer</p>
-                            </div>
-                            <div class="col-md-6">
-                                <img class="img-fluid" src="/storage/timeline/trouw_demeyer.jpg"/>
-                            </div>
-
+                        <div class="timeline-title">
+                            Daar kwamen een stel kinderen van (niet de meest interresante van hun nageslacht, <em>but
+                                what
+                                can you do</em>)
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-badge primary">
-                        <a><i class="fa fa-birthday-cake" rel="tooltip"></i>
-                        </a>
-                    </div>
-                    <div class="bg-faded p-4 my-4 timeline-panel">
                         <div class="timeline-body row">
                             <div class="col-md-6">
                                 <img class="img-fluid" src="/storage/timeline/baby_wesley.jpg"/>
-                            </div>
-                            <div class="col-md-6">
-                                <p>Wesley Knoppert</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </li>
-
-                <li class="timeline-inverted">
-                    <div class="timeline-badge primary">
-                        <a><i class="fa fa-bug" rel="tooltip"></i>
-                        </a>
-                    </div>
-                    <div class="bg-faded p-4 my-4 timeline-panel">
-                        <div class="timeline-body row">
-                            <div class="col-md-6">
-                                <p>Laureen de Meyer</p>
                             </div>
                             <div class="col-md-6">
                                 <img class="img-fluid" src="/storage/timeline/baby_laureen.jpg"/>
@@ -153,13 +126,31 @@
                 </li>
                 <li>
                     <div class="timeline-badge primary">
+                        <a><i class="fa fa-child" rel="tooltip"></i>
+                        </a>
+                    </div>
+                    <div class="bg-faded p-4 my-4 timeline-panel">
+                        <div class="timeline-body row">
+                            <div class="col-md-6">
+                                <p>Om de een of andere reden bleek zelf een baby niet genoeg te zijn ze weer uit elkaar
+                                    te drijven</p>
+                            </div>
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="/storage/timeline/baby-louis.jpg"/>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge primary">
                         <a><i class="fa fa-wheelchair-alt" rel="tooltip"></i>
                         </a>
                     </div>
                     <div class="bg-faded p-4 my-4 timeline-panel">
                         <div class="timeline-body row">
                             <div class="col-md-6">
-                                <p>Na precies 4 jaar samen te zijn. Samen te wonen, een kind te hebben, gaan ze
+                                <p>Na precies 4 jaar samen te zijn, gaan ze
                                     traditioneel toch nog in het bootje stappen. </p>
                             </div>
                             <div class="col-md-6">
