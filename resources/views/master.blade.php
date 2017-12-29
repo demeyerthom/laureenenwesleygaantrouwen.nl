@@ -35,7 +35,7 @@
                 <a class="nav-link text-uppercase" href="{{route('home')}}">Home</a>
             </li>
             <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase disabled" href="#">Cadeaus</a>
+                <a class="nav-link text-uppercase" href="{{route('gift-list')}}">Cadeaus</a>
             </li>
             <li class="nav-item px-lg-4">
                 <a class="nav-link text-uppercase disabled" href="#">Gastenboek</a>

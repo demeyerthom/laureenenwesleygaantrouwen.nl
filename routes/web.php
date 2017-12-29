@@ -2,19 +2,27 @@
 
 /** @var \Illuminate\Routing\Router $router */
 
-$router->get('/', 'HomeController@get')->name('home');
+use Illuminate\Support\Facades\Route;
+use TCG\Voyager\Facades\Voyager;
 
-$router->group(['prefix' => 'rsvp'], function () {
-    $this->get('/formulier', 'RsvpController@form')->name('rsvp-form');
-    $this->post('/formulier', 'RsvpController@saveForm');
-    $this->get('/bedankt', 'RsvpController@thanks')->name('rsvp-thanks');
-});
-$router->get('/photobook', 'PhotobookController@get')->name('photobook');
+Route::get('/', 'HomeController@get')->name('home');
 
-$router->group(['namespace' => 'Guestbook', 'prefix' => 'guestbook'], function () {
-    $this->get('/', 'GuestbookController@get')->name('guestbook');
+Route::group(['prefix' => 'rsvp'], function () {
+    Route::get('/formulier', 'RsvpController@form')->name('rsvp-form');
+    Route::post('/formulier', 'RsvpController@saveForm');
+    Route::get('/bedankt', 'RsvpController@thanks')->name('rsvp-thanks');
 });
 
-$router->group(['prefix' => 'admin'], function () {
+Route::get('/photobook', 'PhotobookController@get')->name('photobook');
+
+Route::group(['prefix' => 'gifts'], function () {
+    Route::get('/', 'GiftController@list')->name('gift-list');
+});
+
+Route::group(['namespace' => 'Guestbook', 'prefix' => 'guestbook'], function () {
+    Route::get('/', 'GuestbookController@get')->name('guestbook');
+});
+
+Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

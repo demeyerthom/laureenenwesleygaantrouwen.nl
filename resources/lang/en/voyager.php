@@ -237,6 +237,7 @@ return [
         'already_exists_table'      => 'Table :table already exists',
         'bread_crud_actions'        => 'BREAD/CRUD Actions',
         'bread_info'                => 'BREAD info',
+        'browse_bread'              => 'Browse BREAD',
         'column'                    => 'Column',
         'composite_warning'         => 'Warning: this column is part of a composite index',
         'controller_name'           => 'Controller Name',
@@ -287,6 +288,9 @@ return [
         'policy_name'              => 'Policy Name',
         'policy_name_ph'           => 'ex. \App\Policies\UserPolicy, if left empty will try and use the default',
         'primary'                  => 'PRIMARY',
+        'relationship'             => [
+            'create'    => 'Create relationship'
+        ],
         'server_pagination'        => 'Server-side Pagination',
         'success_create_table'     => 'Successfully created :table table',
         'success_created_bread'    => 'Successfully created new BREAD',
