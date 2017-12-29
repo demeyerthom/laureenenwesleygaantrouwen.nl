@@ -10897,6 +10897,10 @@ hr.divider {
     background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.4), transparent);
 }
 
+.card-columns {
+    column-count: 4;
+}
+
 .timeline {
     list-style: none;
     padding: 20px 0 20px;

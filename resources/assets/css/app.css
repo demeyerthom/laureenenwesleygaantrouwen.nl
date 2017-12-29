@@ -151,3 +151,7 @@ hr.divider {
     background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.4), transparent);
     background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.4), transparent);
 }
+
+.card-columns {
+    column-count: 4;
+}

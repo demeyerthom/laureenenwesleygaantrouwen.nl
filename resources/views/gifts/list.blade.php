@@ -7,18 +7,22 @@
             <h2 class="text-center text-lg text-uppercase">Cadeaus</h2>
             <hr class="divider">
         </div>
-            @if(!empty($gifts))
+        @if(!empty($gifts))
+            <div class="card-columns">
                 @foreach($gifts as $gift)
-                    <div class="col-md-3">
+                    <div class="">
                         <div class="card">
                             <img class="card-img-top" src="/storage/{{$gift->image}}" alt="{{$gift->name}}">
                             <div class="card-body">
+                                <h3 class="card-title">{{$gift->name}}</h3>
                                 <p class="card-text">{{$gift->description}}</p>
                             </div>
                             <div class="card-footer">
-                                @if($gift->amount !== 0)
+                                @if(!$gift->isOpenContribution())
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#modal{{$gift->id}}">Nog te geven: {{$gift->amount}}</button>
+                                            data-target="#modal{{$gift->id}}">Nog te geven:
+                                        {{round($gift->amount, 2)}} &euro;
+                                    </button>
                                 @else
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
                                             data-target="#modal{{$gift->id}}">Bijdragen
@@ -42,22 +46,24 @@
                                         {{ csrf_field() }}
                                         <input type="hidden" name="gift_id" value="{{$gift->id}}">
                                         <div class="form-group">
-                                            @if($gift->amount !== 0)
-                                                <label for="amount">Aantal geven</label>
-                                                <input type="number" class="form-control" id="amount"
-                                                       min="1" max="{{$gift->amount}}"
-                                                       aria-describedby="emailHelp" value="1">
-                                            @else
-                                                <label for="amount">Hoeveelheid geven</label>
-                                                <input type="number" class="form-control" id="amount"
-                                                       min="1" step="0.5"
-                                                       aria-describedby="emailHelp" value="1">
-                                            @endif
+                                            <label for="first-name">Voornaam</label>
+                                            <input type="text" class="form-control" id="first-name"
+                                                   placeholder="Voornaam">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last-name">Email address</label>
+                                            <input type="text" class="form-control" id="last-name"
+                                                   placeholder="Achternaam">
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email address</label>
                                             <input type="email" class="form-control" id="email"
-                                                   aria-describedby="emailHelp" placeholder="Enter email">
+                                                   placeholder="Enter email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="amount">Aantal euros die je wilt geven</label>
+                                            <input type="number" class="form-control" id="amount"
+                                                   min="1.00" step="1.00" value="1.00">
                                         </div>
                                     </form>
                                 </div>
@@ -69,8 +75,9 @@
                         </div>
                     </div>
                 @endforeach
-            @else
-                <p>Er zijn geen cadeaus ingevoerd!</p>
-            @endif
+            </div>
+        @else
+            <p>Er zijn geen cadeaus ingevoerd!</p>
+        @endif
     </div>
 @endsection

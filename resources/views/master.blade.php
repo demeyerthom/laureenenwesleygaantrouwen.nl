@@ -31,7 +31,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item px-lg-4 active">
                 <a class="nav-link text-uppercase" href="{{route('home')}}">Home</a>
             </li>
             <li class="nav-item px-lg-4">

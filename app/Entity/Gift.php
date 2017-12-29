@@ -9,5 +9,12 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Gift extends Model
 {
+    /**
+     * @return bool
+     */
+    public function isOpenContribution(): bool
+    {
+        return $this->amount == 0;
+    }
 
 }
