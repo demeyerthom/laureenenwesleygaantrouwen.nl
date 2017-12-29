@@ -1,20 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\RSVP;
+namespace App\Http\Controllers;
 
 use App\Entity\EventPermission;
 use App\Entity\Invitee;
-use App\Http\Controllers\Controller;
 use App\Mail\RsvpSubmitted;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer;
-use Illuminate\Support\Facades\Validator;
 
 /**
- * Class FormController
+ * Class RsvpController
  */
-class FormController extends Controller
+class RsvpController extends Controller
 {
     /**
      * @var Mailer
@@ -36,7 +34,7 @@ class FormController extends Controller
      *
      * @return View
      */
-    public function get(Request $request): View
+    public function form(Request $request): View
     {
         /** @var EventPermission $eventPermission */
         $eventPermission = EventPermission::where('token', $request->get('token'))->first();
@@ -49,7 +47,7 @@ class FormController extends Controller
      *
      * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
      */
-    public function post(Request $request)
+    public function saveForm(Request $request)
     {
         /** @var EventPermission $eventPermission */
         $eventPermission = EventPermission::where('token', $request->get('token'))->first();
@@ -84,5 +82,13 @@ class FormController extends Controller
         $this->mailer->send(new RsvpSubmitted($invitees));
 
         return \response(route('rsvp-thanks'), 201);
+    }
+
+    /**
+     * @return View
+     */
+    public function thanks(): View
+    {
+        return view('rsvp.thanks');
     }
 }

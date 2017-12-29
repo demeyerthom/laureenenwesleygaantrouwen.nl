@@ -4,10 +4,10 @@
 
 $router->get('/', 'HomeController@get')->name('home');
 
-$router->group(['namespace' => 'RSVP', 'prefix' => 'rsvp'], function () {
-    $this->get('/formulier', 'FormController@get')->name('rsvp-form');
-    $this->post('/formulier', 'FormController@post');
-    $this->get('/bedankt', 'ThanksController@get')->name('rsvp-thanks');
+$router->group(['prefix' => 'rsvp'], function () {
+    $this->get('/formulier', 'RsvpController@form')->name('rsvp-form');
+    $this->post('/formulier', 'RsvpController@saveForm');
+    $this->get('/bedankt', 'RsvpController@thanks')->name('rsvp-thanks');
 });
 $router->get('/photobook', 'PhotobookController@get')->name('photobook');
 
