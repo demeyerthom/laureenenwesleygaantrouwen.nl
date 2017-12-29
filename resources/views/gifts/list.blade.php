@@ -7,10 +7,9 @@
             <h2 class="text-center text-lg text-uppercase">Cadeaus</h2>
             <hr class="divider">
         </div>
-        <div class="row">
             @if(!empty($gifts))
                 @foreach($gifts as $gift)
-                    <div class="col-sm-3">
+                    <div class="col-md-3">
                         <div class="card">
                             <img class="card-img-top" src="/storage/{{$gift->image}}" alt="{{$gift->name}}">
                             <div class="card-body">
@@ -73,6 +72,5 @@
             @else
                 <p>Er zijn geen cadeaus ingevoerd!</p>
             @endif
-        </div>
     </div>
 @endsection
