@@ -17,6 +17,8 @@ Route::get('/photobook', 'PhotobookController@get')->name('photobook');
 
 Route::group(['prefix' => 'gifts'], function () {
     Route::get('/', 'GiftController@list')->name('gift-list');
+    Route::post('/', 'GiftController@post');
+    Route::get('/thanks/{id}', 'GiftController@thanks')->name('gift-thanks');
 });
 
 Route::group(['namespace' => 'Guestbook', 'prefix' => 'guestbook'], function () {
