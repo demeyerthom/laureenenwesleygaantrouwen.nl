@@ -3,9 +3,10 @@
 namespace App\Mail;
 
 use App\Entity\Invitee;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 
-class RsvpSubmitted extends Mailable
+class RsvpSubmitted extends Mailable implements ShouldQueue
 {
     /**
      * @var Invitee[]
