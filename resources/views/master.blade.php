@@ -19,12 +19,12 @@
 
 <body>
 
-<div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">Laureen en Wesley gaan
+<div class="tagline-upper text-center text-heading text-shadow text-white d-none d-lg-block">Laureen en Wesley gaan
     trouwen
 </div>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,10 +38,8 @@
     @yield('content')
 </div>
 
-<footer class="bg-faded text-center py-4">
-    <div class="container">
-        <p class="m-0">Copyright &copy; Thomas De Meyer 2017</p>
-    </div>
+<footer class="footer text-white bg-faded text-center py-4">
+        <p>Copyright &copy; Thomas De Meyer 2017</p>
 </footer>
 <script src="{{asset('js/app.js')}}"></script>
 <script>

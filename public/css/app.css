@@ -10756,7 +10756,6 @@ a.text-dark:focus, a.text-dark:hover {
 
 body {
     font-family: "Capitals Regular", "Open Sans", Helvetica, Arial, sans-serif;
-    background: url('/storage/images/bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -10764,7 +10763,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .text-heading {
-    font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Capitals Regular', "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -10777,6 +10776,7 @@ h1 {
 }
 
 .tagline-upper {
+    background: #409e9b;
     font-size: 5rem;
     font-weight: 700;
     line-height: 2;
@@ -10808,7 +10808,7 @@ h1 {
 }
 
 hr.divider {
-    border-color: #292b2c;
+    border-color: #409e9b;
     max-width: 250px;
 }
 
@@ -10897,8 +10897,18 @@ hr.divider {
     background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.4), transparent);
 }
 
-.card-columns {
-    column-count: 4;
+@media (min-width: 576px) {
+    .pull-right-large-screen {
+        float: right;
+    }
+}
+
+.footer{
+    background: #409e9b;
+}
+
+.content-block{
+    border: 5px dotted #409e9b;
 }
 
 .timeline {

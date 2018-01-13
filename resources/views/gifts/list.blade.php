@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div class="row bg-faded p-4 my-4">
+    <div class="row bg-faded p-4 my-4 content-block">
         <div class="col-md-12">
             <hr class="divider">
             <h2 class="text-center text-lg text-uppercase">Cadeaus</h2>
@@ -10,25 +10,23 @@
         @if(!empty($gifts))
             <div class="card-columns">
                 @foreach($gifts as $gift)
-                    <div class="">
-                        <div class="card">
-                            <img class="card-img-top" src="/storage/{{$gift->image}}" alt="{{$gift->name}}">
-                            <div class="card-body">
-                                <h3 class="card-title">{{$gift->name}}</h3>
-                                <p class="card-text">{{$gift->description}}</p>
-                            </div>
-                            <div class="card-footer">
-                                @if($gift->currentAmount() <= 0)
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#modal{{$gift->id}}" disabled>Helemaal vergeven
-                                    </button>
-                                @else
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#modal{{$gift->id}}">Nog te geven:
-                                        {{round($gift->currentAmount(), 2)}} &euro;
-                                    </button>
-                                @endif
-                            </div>
+                    <div class="card">
+                        <img class="card-img-top" src="/storage/{{$gift->image}}" alt="{{$gift->name}}">
+                        <div class="card-body">
+                            <h3 class="card-title">{{$gift->name}}</h3>
+                            <p class="card-text">{{$gift->description}}</p>
+                        </div>
+                        <div class="card-footer">
+                            @if($gift->currentAmount() <= 0)
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#modal{{$gift->id}}" disabled>Helemaal vergeven
+                                </button>
+                            @else
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#modal{{$gift->id}}">Nog te geven:
+                                    {{round($gift->currentAmount(), 2)}} &euro;
+                                </button>
+                            @endif
                         </div>
                     </div>
                     <div class="modal fade bd-example-modal-lg" id="modal{{$gift->id}}" tabindex="-1" role="dialog"

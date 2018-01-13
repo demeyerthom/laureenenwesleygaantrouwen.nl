@@ -2,7 +2,7 @@
 
 @section('content')
     @if($permission === null)
-        <div class="bg-faded p-4 my-4">
+        <div class="bg-faded p-4 my-4 content-block">
             <hr class="divider">
             <h2 class="text-center text-lg text-uppercase my-0">Aanwezigheid gasten</h2>
             <hr class="divider">
@@ -16,27 +16,27 @@
             <div class="col-sm-12">
                 <form id="insertTokenForm">
                     @if($hasToken)
-                        <div id="first-name-error" class="alert alert-danger col-12" role="alert">
-                            Deze token bestaat niet, of is incorrect. Probeer het nog een keer, of neem contact op
-                            met <a href="mailto:tech@laureenenwesleygaantrouwen.nl">tech</a>!
+                        <div class="form-group">
+                            <div id="first-name-error" class="alert alert-danger" role="alert">
+                                Deze token bestaat niet, of is incorrect. Probeer het nog een keer, of neem contact op
+                                met <a href="mailto:tech@laureenenwesleygaantrouwen.nl">tech</a>!
+                            </div>
                         </div>
                     @endif
-                    <div class="form-group row">
-                        <div class="col-9">
-                            <input type="text" class="form-control form-control-lg" id="token" placeholder="Code"
-                                   name="token">
-                        </div>
-                        <div class="col-3">
-                            <button type="submit" id="submit-token" class="btn btn-lg btn-primary">
-                                Ga naar het formulier!
-                            </button>
-                        </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="token" placeholder="Code"
+                               name="token">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="submit-token" class="btn btn-lg btn-primary">
+                            Invoeren
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     @else
-        <div class="bg-faded p-4 my-4">
+        <div class="bg-faded p-4 my-4 content-block">
             <hr class="divider">
             <h2 class="text-center text-lg text-uppercase my-0">RSVP</h2>
             <hr class="divider">
@@ -46,16 +46,22 @@
         <form id="inviteeForm">
             {{ csrf_field() }}
             <div id="invitees"></div>
-            <div class="bg-faded p-4 my-4">
-                <button type="submit" id="add-invitee" class="btn btn-lg btn-outline-primary">
-                    Nog iemand toevoegen
-                </button>
-                <button type="submit" id="save-invitees" class="btn btn-lg btn-outline-success float-right">
-                    Opslaan
-                </button>
+            <div class="bg-faded p-4 my-4 content-block">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button type="submit" id="add-invitee" class="btn btn-lg btn-outline-primary">
+                            RSVP toevoegen
+                        </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="submit" id="save-invitees" class="btn btn-lg btn-success pull-right-large-screen">
+                            Opslaan
+                        </button>
+                    </div>
+                </div>
             </div>
         </form>
-        <div id="invitee-template" class="d-none bg-faded p-4 my-4">
+        <div id="invitee-template" class="d-none bg-faded p-4 my-4 content-block">
             <div class="row">
                 <div class="col-md-12">
                     <h3>Persoonsgegevens</h3>
@@ -219,7 +225,7 @@
                     @endif
 
                     <button type="submit" id="delete-invitee" class="btn btn-lg btn-outline-danger float-right">
-                        Ik wil deze eigenlijk helemaal niet opslaan
+                        Verwijderen
                     </button>
                 </div>
             </div>

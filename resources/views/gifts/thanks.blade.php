@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div class="row bg-faded p-4 my-4">
+    <div class="row bg-faded p-4 my-4 content-block">
         <div class="col-md-12">
             <hr class="divider">
             <h2 class="text-center text-lg text-uppercase">Bedankt voor de bijdrage</h2>

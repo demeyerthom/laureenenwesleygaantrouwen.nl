@@ -1,9 +1,9 @@
 @extends('master')
 
 @section('content')
-    <div class="bg-faded p-4 my-4">
+    <div class="bg-faded p-4 my-4 content-block">
         <div>
-            <hr>
+            <hr class="divider">
             <div class="countdown text-center col-md-6" id="js-countdown">
                 <div class="countdown-item col-md-6">
                     <div class="countdown-timer js-countdown-days" aria-labelledby="day-countdown"></div>
@@ -14,7 +14,7 @@
                     <div class="countdown-label" id="hour-countdown">Uren</div>
                 </div>
             </div>
-            <hr>
+            <hr class="divider">
 
             <div class="text-center col-md-12">
                 <p class="font-weight-bold text-uppercase">Zaterdag 9 Juni 2018</p>
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-faded p-4 my-4">
+    <div class="bg-faded p-4 my-4 content-block">
         <hr class="divider">
         <h2 class="text-center text-lg text-uppercase my-0">Er waren eens 2 koppels.......</h2>
         <hr class="divider">
