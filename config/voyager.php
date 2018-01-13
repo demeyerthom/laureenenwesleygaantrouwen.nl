@@ -121,18 +121,18 @@ return [
         /*
          * Set whether or not the multilingual is supported by the BREAD input.
          */
-        'enabled' => true,
+        'enabled' => false,
 
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'nl',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
-            'en'
+            'nl'
         ],
     ],
 
@@ -152,13 +152,6 @@ return [
             'model' => TCG\Voyager\Models\User::class,
             'url'   => 'admin/users',
             'image' => '/images/widget-backgrounds/02.png',
-        ],
-        [
-            'name'  => 'Post',
-            'icon'  => 'voyager-news',
-            'model' => TCG\Voyager\Models\Post::class,
-            'url'   => 'admin/posts',
-            'image' => '/images/widget-backgrounds/03.png',
         ],
         [
             'name'  => 'Page',
@@ -202,7 +195,8 @@ return [
         ],
 
         'widgets' => [
-            'TCG\\Voyager\\Widgets\\UserDimmer',
+            \TCG\Voyager\Widgets\UserDimmer::class,
+            \TCG\Voyager\Widgets\PageDimmer::class
         ],
 
     ],

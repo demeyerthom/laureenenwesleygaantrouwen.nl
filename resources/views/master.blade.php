@@ -30,26 +30,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item px-lg-4 active">
-                <a class="nav-link text-uppercase" href="{{route('home')}}">Home</a>
-            </li>
-            <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase" href="{{route('gift-list')}}">Cadeaus</a>
-            </li>
-            <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase disabled" href="#">Gastenboek</a>
-            </li>
-            <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase" href="{{route('photobook')}}">Foto album</a>
-            </li>
-            <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase" href="{{route('rsvp-form')}}">Aanwezigheid gasten</a>
-            </li>
-            <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase disabled" href="#">Nuttige informatie</a>
-            </li>
-        </ul>
+        {{menu('home', 'menu' )}}
     </div>
 </nav>
 
