@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    @if($permissions === null)
+    @if($permission === null)
         <div class="bg-faded p-4 my-4">
             <hr class="divider">
             <h2 class="text-center text-lg text-uppercase my-0">Aanwezigheid gasten</h2>
@@ -89,7 +89,7 @@
                         </small>
                     </div>
 
-                    @if($permissions->reception)
+                    @if($permission->reception)
                         <div class="form-group">
                             <h3>Ceremonie</h3>
                             <div id="reception-error" class="alert alert-danger" role="alert" hidden>
@@ -110,7 +110,7 @@
                         </div>
                     @endif
 
-                    @if($permissions->dinner)
+                    @if($permission->dinner)
                         <div class="form-group">
                             <h3>Dinner</h3>
                             <div id="dinner-error" class="alert alert-danger" role="alert" hidden>
@@ -197,7 +197,7 @@
                         </div>
                     @endif
 
-                    @if($permissions->party)
+                    @if($permission->party)
                         <div class="form-group">
                             <h3>Party</h3>
                             <div id="party-error" class="alert alert-danger" role="alert" hidden>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Entity\EventPermission;
 use App\Entity\Invitee;
+use App\Mail\RsvpConfirmationSent;
 use App\Mail\RsvpSubmitted;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -36,10 +37,10 @@ class RsvpController extends Controller
      */
     public function form(Request $request): View
     {
-        /** @var EventPermission $eventPermission */
-        $eventPermission = EventPermission::where('token', $request->get('token'))->first();
+        /** @var EventPermission $permission */
+        $permission = EventPermission::where('token', $request->get('token'))->first();
 
-        return view('rsvp.form', ['hasToken' => $request->has('token'), 'permissions' => $eventPermission]);
+        return view('rsvp.form', ['hasToken' => $request->has('token'), 'permission' => $permission]);
     }
 
     /**
@@ -63,10 +64,13 @@ class RsvpController extends Controller
             ]
         );
 
+        $groupUid = uniqid();
         $invitees = [];
 
         foreach ($rows['invitee'] as $row) {
             $invitee = new Invitee();
+            $invitee->group_uid = $groupUid;
+            $invitee->eventPermission()->associate($eventPermission);
             $invitee->first_name = $row['first-name'];
             $invitee->last_name = $row['last-name'];
             $invitee->email = $row['email'];
@@ -78,17 +82,22 @@ class RsvpController extends Controller
             $invitees[] = $invitee;
         }
 
-        // Send a notification email
+        // Send notification emails
         $this->mailer->send(new RsvpSubmitted($invitees));
+        $this->mailer->send(new RsvpConfirmationSent($invitees));
 
-        return \response(route('rsvp-thanks'), 201);
+        return \response(route('rsvp-thanks', ['id' => $groupUid]), 201);
     }
 
     /**
+     * @param string $id
+     *
      * @return View
      */
-    public function thanks(): View
+    public function thanks(string $id): View
     {
-        return view('rsvp.thanks');
+        $invitees = Invitee::where('group_uid', $id)->get();
+
+        return view('rsvp.thanks', ['invitees' => $invitees]);
     }
 }

@@ -6,7 +6,7 @@ use App\Entity\GiftReservation;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 
-class GiftReserved extends Mailable implements ShouldQueue
+class GiftReservedSubmitted extends Mailable implements ShouldQueue
 {
     /**
      * @var GiftReservation

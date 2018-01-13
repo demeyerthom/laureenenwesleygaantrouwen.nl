@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Entity\Gift;
 use App\Entity\GiftReservation;
-use App\Mail\GiftReserved;
+use App\Mail\GiftReservedSubmitted;
 use App\Validation\FloatValue;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -67,7 +67,7 @@ class GiftController
         $giftReservation->amount = $request->get('amount');
         $giftReservation->save();
 
-        $this->mailer->send(new GiftReserved($giftReservation));
+        $this->mailer->send(new GiftReservedSubmitted($giftReservation));
 
         return $response->setContent(route('gift-thanks', ['id' => $giftReservation->id]))->setStatusCode(201);
     }
