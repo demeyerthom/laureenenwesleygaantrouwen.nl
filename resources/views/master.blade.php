@@ -24,7 +24,7 @@
 </div>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
     @yield('content')
 </div>
 
-<footer class="footer text-white bg-faded text-center py-4">
+<footer class="footer text-white text-center py-4">
         <p>Copyright &copy; Thomas De Meyer 2017</p>
 </footer>
 <script src="{{asset('js/app.js')}}"></script>

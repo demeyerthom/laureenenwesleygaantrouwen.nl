@@ -87,6 +87,10 @@ hr.divider {
     float: none;
 }
 
+.navbar {
+    background-color: #769d9e;
+}
+
 .sticky {
     position: fixed;
     top: 0;
@@ -163,5 +167,17 @@ hr.divider {
 }
 
 .content-block{
-    border: 5px dotted #409e9b;
+    border: 2px dashed #409e9b;
+}
+
+.btn-site {
+    color: #fff;
+    background-color: #409e9b;
+    border-color: #409e9b;
+}
+
+.btn-site:hover {
+    color: #fff;
+    background-color: #769d9e;
+    border-color: #769d9e;
 }

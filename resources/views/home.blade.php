@@ -33,7 +33,7 @@
             </div>
             <hr class="divider">
             <div class="text-center col-md-12">
-                <a type="submit" href="{{route('rsvp-form')}}" class="btn btn-lg btn-success">
+                <a type="submit" href="{{route('rsvp-form')}}" class="btn btn-lg btn-site">
                     Geef je op!
                 </a>
             </div>

@@ -28,7 +28,7 @@
                                name="token">
                     </div>
                     <div class="form-group">
-                        <button type="submit" id="submit-token" class="btn btn-lg btn-primary">
+                        <button type="submit" id="submit-token" class="btn btn-lg btn-site">
                             Invoeren
                         </button>
                     </div>
@@ -54,7 +54,7 @@
                         </button>
                     </div>
                     <div class="col-sm-6">
-                        <button type="submit" id="save-invitees" class="btn btn-lg btn-success pull-right-large-screen">
+                        <button type="submit" id="save-invitees" class="btn btn-lg btn-site pull-right-large-screen">
                             Opslaan
                         </button>
                     </div>

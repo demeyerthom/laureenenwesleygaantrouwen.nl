@@ -18,11 +18,11 @@
                         </div>
                         <div class="card-footer">
                             @if($gift->currentAmount() <= 0)
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                <button type="button" class="btn btn-site" data-toggle="modal"
                                         data-target="#modal{{$gift->id}}" disabled>Helemaal vergeven
                                 </button>
                             @else
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                <button type="button" class="btn btn-site" data-toggle="modal"
                                         data-target="#modal{{$gift->id}}">Nog te geven:
                                     {{round($gift->currentAmount(), 2)}} &euro;
                                 </button>
@@ -83,7 +83,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Terug
                                         </button>
-                                        <button type="button" class="btn btn-primary" id="submit-{{$gift->id}}">
+                                        <button type="button" class="btn btn-site" id="submit-{{$gift->id}}">
                                             Opslaan
                                         </button>
                                     </div>

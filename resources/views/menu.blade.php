@@ -2,7 +2,7 @@
     @foreach($items as $menu_item)
 
         <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase" href="{{ $menu_item->link() }}">{{ $menu_item->title }}</a>
+            <a class="nav-link text-white text-uppercase" href="{{ $menu_item->link() }}">{{ $menu_item->title }}</a>
         </li>
     @endforeach
 </ul>
