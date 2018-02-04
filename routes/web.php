@@ -2,6 +2,10 @@
 
 /** @var \Illuminate\Routing\Router $router */
 
+use App\Entity\GiftReservation;
+use App\Entity\Invitee;
+use App\Mail\GiftReservedSubmitted;
+use App\Mail\RsvpConfirmationSent;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
 
@@ -22,6 +26,19 @@ Route::group(['prefix' => 'gifts'], function () {
 });
 
 Route::get('/pages/{slug}', 'PageController@get');
+
+Route::group(['prefix' => 'mailable', 'middleware' => 'admin.user'], function () {
+    Route::get('gift-reserved-submitted/{id}', function ($id) {
+        $reservation = GiftReservation::find($id);
+
+        return new GiftReservedSubmitted($reservation);
+    });
+    Route::get('rsvp-confirmation-sent/{uid}', function ($uid) {
+        $invitees = Invitee::where('group_uid', $uid)->get();
+
+        return new RsvpConfirmationSent($invitees->all());
+    });
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
